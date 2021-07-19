@@ -34,10 +34,6 @@ MouseManager::MouseManager()
     , clients_(nullptr)
     , monitors_(nullptr)
 {
-    /* set cursor theme */
-    cursor = XCreateFontCursor(g_display, XC_left_ptr);
-    XDefineCursor(g_display, g_root, cursor);
-
     mouseFunctions_ = {
         { "move",       &MouseManager::mouse_initiate_move },
         { "zoom",       &MouseManager::mouse_initiate_zoom },
